@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gaze-Adaptive Interfaces: Understanding User Attention in Dynamic Environments — Max Raed, ACM CHI 2024" />
+  <title>Gaze-Adaptive Interfaces — Max Raed</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/work-page.css" />
+</head>
+<body>
+
+  <header class="nav-header">
+    <nav class="nav-inner">
+      <a href="../index.html#hero" class="nav-logo">MR</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#works" class="active">Works</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <a href="../cv.pdf" download class="btn-cv">
+        <i class="fas fa-download"></i> Download CV
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="work-page">
+
+    <div class="work-hero">
+      <div class="work-hero-inner">
+        <a href="../index.html#works" class="back-link">
+          <i class="fas fa-arrow-left"></i> Back to Works
+        </a>
+        <div class="work-hero-meta">
+          <span class="work-tag">ACM CHI 2024</span>
+          <span class="work-hero-year">2024</span>
+        </div>
+        <h1 class="work-page-title">
+          Gaze-Adaptive Interfaces: Understanding User Attention in Dynamic Environments
+        </h1>
+        <p class="work-page-authors">Max Raed, Jane Doe, John Smith</p>
+        <div class="work-action-links">
+          <a href="#" class="btn-primary"><i class="fas fa-file-pdf"></i> PDF</a>
+          <a href="#" class="btn-ghost"><i class="fab fa-github"></i> Code</a>
+          <a href="#" class="btn-ghost"><i class="fas fa-video"></i> Talk Video</a>
+          <a href="#" class="btn-ghost"><i class="fas fa-external-link-alt"></i> ACM DL</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="work-body">
+      <div class="work-body-inner">
+
+        <div class="work-teaser">
+          <div class="teaser-placeholder">
+            Teaser Image · 1200 × 675 px
+          </div>
+          <p class="figure-caption">
+            An overview of our gaze-adaptive system: real-time attention estimation drives
+            dynamic layout adjustments, reducing visual search time in cluttered interfaces.
+          </p>
+        </div>
+
+        <div class="work-section">
+          <h2>Abstract</h2>
+          <p>
+            Modern user interfaces present an ever-growing density of information. Users must
+            continually navigate complex visual hierarchies, often under time pressure. We present
+            <strong>GazeFlow</strong>, a system that continuously estimates user attention from
+            commodity eye-tracking hardware and adapts the interface layout in real time to
+            surface relevant content and suppress distractors.
+          </p>
+          <p>
+            In a within-subject study with 24 participants (N = 24), GazeFlow reduced task
+            completion time by <strong>23%</strong> and perceived cognitive load by
+            <strong>18%</strong> compared to a static baseline. We discuss implications for
+            designing attention-aware interfaces and the privacy considerations of always-on gaze data.
+          </p>
+        </div>
+
+        <div class="work-section">
+          <h2>Introduction</h2>
+          <p>
+            As digital workspaces grow denser, the cost of visual navigation has become a
+            meaningful contributor to user fatigue and error rates. Prior work in adaptive
+            interfaces has largely relied on explicit user input or coarse contextual signals;
+            gaze, a direct proxy for visual attention, remains underexplored as a continuous
+            adaptation signal in everyday desktop environments.
+          </p>
+          <p>
+            We address this gap by building and evaluating a real-time gaze-adaptive interface
+            that operates within a standard office workflow without requiring explicit user effort.
+          </p>
+        </div>
+
+        <div class="work-section">
+          <h2>Contributions</h2>
+          <ul>
+            <li>A real-time gaze processing pipeline suitable for commodity eye-trackers (≤ 60 Hz)</li>
+            <li>GazeFlow: an adaptive layout engine that reweights UI element salience based on attention estimates</li>
+            <li>A controlled user study (N = 24) demonstrating significant reductions in task time and cognitive load</li>
+            <li>Design guidelines for attention-aware interfaces, including privacy-preserving gaze handling</li>
+          </ul>
+        </div>
+
+        <div class="work-figure">
+          <div class="figure-placeholder">Figure — System Architecture</div>
+          <p class="figure-caption">
+            Figure 1: GazeFlow system architecture. Raw gaze coordinates are processed by an
+            attention estimation module; the layout engine receives attention maps and reflows
+            UI elements every 500 ms.
+          </p>
+        </div>
+
+        <div class="work-section">
+          <h2>Results</h2>
+          <p>
+            Participants completed information-retrieval tasks significantly faster with GazeFlow
+            active (M = 18.4 s, SD = 4.1) compared to the static baseline (M = 23.9 s, SD = 5.3;
+            t(23) = 4.82, p &lt; .001, d = 0.98). NASA-TLX scores indicated lower perceived mental
+            demand (GazeFlow: M = 42.1 vs. Baseline: M = 51.3).
+          </p>
+          <p>
+            Qualitative feedback highlighted two tension points: some participants found frequent
+            layout changes disorienting during exploratory tasks, suggesting an adaptivity threshold
+            mechanism as future work.
+          </p>
+        </div>
+
+        <div class="work-section">
+          <h2>Citation</h2>
+          <pre class="bibtex"><code>@inproceedings{raed2024gazeflow,
+  title     = {Gaze-Adaptive Interfaces: Understanding User Attention
+               in Dynamic Environments},
+  author    = {Raed, Max and Doe, Jane and Smith, John},
+  booktitle = {Proceedings of the 2024 CHI Conference on Human
+               Factors in Computing Systems},
+  year      = {2024},
+  doi       = {10.1145/xxxxxxx.xxxxxxx},
+  publisher = {ACM},
+  address   = {New York, NY, USA}
+}</code></pre>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Max Raed</span>
+      <a href="../index.html" style="color:rgba(255,255,255,0.3);">← Back to Portfolio</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

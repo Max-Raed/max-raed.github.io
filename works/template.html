@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+  ╔═══════════════════════════════════════════════════════════╗
+  ║  WORK / PAPER SUBPAGE TEMPLATE                           ║
+  ║                                                           ║
+  ║  HOW TO ADD A NEW PAPER:                                  ║
+  ║  1. Copy this file → works/your-paper-slug.html          ║
+  ║  2. Replace every [PLACEHOLDER] with real content        ║
+  ║  3. Update <title> and <meta description>                ║
+  ║  4. Add a work-card in index.html pointing to this file  ║
+  ╚═══════════════════════════════════════════════════════════╝
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="[PAPER TITLE] — Max Raed" />
+  <title>[PAPER TITLE] — Max Raed</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/work-page.css" />
+</head>
+<body>
+
+  <!-- Nav (links back to index.html sections) -->
+  <header class="nav-header">
+    <nav class="nav-inner">
+      <a href="../index.html#hero" class="nav-logo">MR</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#works">Works</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <a href="../cv.pdf" download class="btn-cv">
+        <i class="fas fa-download"></i> Download CV
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="work-page">
+
+    <!-- ── Hero ── -->
+    <div class="work-hero">
+      <div class="work-hero-inner">
+        <a href="../index.html#works" class="back-link">
+          <i class="fas fa-arrow-left"></i> Back to Works
+        </a>
+        <div class="work-hero-meta">
+          <!-- e.g. ACM CHI 2024 · Best Paper Honorable Mention -->
+          <span class="work-tag">[VENUE — e.g. ACM CHI 2024]</span>
+          <span class="work-hero-year">[YEAR]</span>
+        </div>
+        <h1 class="work-page-title">[PAPER / PROJECT TITLE]</h1>
+        <p class="work-page-authors">[Author 1], [Author 2], [Author 3]</p>
+        <div class="work-action-links">
+          <a href="#" class="btn-primary"><i class="fas fa-file-pdf"></i> PDF</a>
+          <a href="#" class="btn-ghost"><i class="fab fa-github"></i> Code</a>
+          <a href="#" class="btn-ghost"><i class="fas fa-video"></i> Video</a>
+          <a href="#" class="btn-ghost"><i class="fas fa-external-link-alt"></i> ACM DL</a>
+          <!-- Add or remove buttons as needed -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Body ── -->
+    <div class="work-body">
+      <div class="work-body-inner">
+
+        <!-- Teaser / hero image (replace placeholder with <img> tag) -->
+        <div class="work-teaser">
+          <div class="teaser-placeholder">
+            Teaser Image · Suggested size: 1200 × 675 px
+          </div>
+          <p class="figure-caption">[Caption describing the teaser figure]</p>
+        </div>
+
+        <!-- Abstract -->
+        <div class="work-section">
+          <h2>Abstract</h2>
+          <p>[Paste your paper abstract here. Describe the problem, methods, and findings concisely.]</p>
+        </div>
+
+        <!-- Introduction / Motivation -->
+        <div class="work-section">
+          <h2>Introduction</h2>
+          <p>[Describe the motivation and problem your work addresses.]</p>
+        </div>
+
+        <!-- Contributions -->
+        <div class="work-section">
+          <h2>Contributions</h2>
+          <ul>
+            <li>[Key contribution 1]</li>
+            <li>[Key contribution 2]</li>
+            <li>[Key contribution 3]</li>
+          </ul>
+        </div>
+
+        <!-- Optional inline figure -->
+        <div class="work-figure">
+          <div class="figure-placeholder">Figure — System / Method Overview</div>
+          <p class="figure-caption">Figure 1: [Caption describing the figure]</p>
+        </div>
+
+        <!-- Results -->
+        <div class="work-section">
+          <h2>Results</h2>
+          <p>[Describe your key findings, metrics, and results.]</p>
+        </div>
+
+        <!-- Add more sections as needed — just copy the work-section div -->
+
+        <!-- Citation / BibTeX -->
+        <div class="work-section">
+          <h2>Citation</h2>
+          <pre class="bibtex"><code>@inproceedings{raed[YEAR][slug],
+  title     = {[PAPER TITLE]},
+  author    = {Raed, Max and [Co-Author, Name]},
+  booktitle = {Proceedings of the [CONFERENCE]},
+  year      = {[YEAR]},
+  doi       = {10.1145/xxxxxxx.xxxxxxx}
+}</code></pre>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Max Raed</span>
+      <a href="../index.html" style="color:rgba(255,255,255,0.3);">← Back to Portfolio</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

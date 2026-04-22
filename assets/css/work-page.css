@@ -1,0 +1,120 @@
+/* ══════════════════════════════
+   WORK / PAPER SUBPAGE STYLES
+   ══════════════════════════════ */
+
+.work-page { padding-top: var(--nav-h); }
+
+/* ── Hero ── */
+.work-hero {
+  background: var(--bg-dark);
+  padding: clamp(60px, 10vw, 110px) 0 clamp(50px, 8vw, 90px);
+}
+.work-hero-inner {
+  max-width: var(--inner-max); margin: 0 auto; padding: 0 var(--inner-pad);
+}
+
+.back-link {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  color: rgba(255,255,255,0.38); font-size: 0.84rem; font-weight: 500;
+  margin-bottom: 2.25rem; transition: color var(--trans);
+}
+.back-link:hover { color: var(--accent); }
+
+.work-hero-meta {
+  display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;
+}
+.work-hero-year { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+
+.work-page-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 800; line-height: 1.1; letter-spacing: -0.03em;
+  color: #fff; max-width: 880px; margin-bottom: 1rem;
+}
+
+.work-page-authors {
+  font-size: 0.92rem; color: rgba(255,255,255,0.42); margin-bottom: 2rem;
+}
+
+.work-action-links {
+  display: flex; flex-wrap: wrap; gap: 0.75rem;
+}
+.work-action-links .btn-ghost {
+  color: rgba(255,255,255,0.6); border-color: rgba(255,255,255,0.18);
+}
+.work-action-links .btn-ghost:hover {
+  background: rgba(255,255,255,0.07); color: #fff; border-color: rgba(255,255,255,0.5);
+}
+
+/* ── Body ── */
+.work-body {
+  padding: clamp(50px, 8vw, 90px) 0;
+  background: var(--bg);
+}
+.work-body-inner {
+  max-width: 780px; margin: 0 auto; padding: 0 var(--inner-pad);
+}
+
+/* ── Teaser ── */
+.work-teaser { margin-bottom: 3.5rem; }
+.teaser-placeholder {
+  width: 100%; aspect-ratio: 16/9;
+  background: var(--bg-alt); border: 2px dashed var(--border); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-light);
+  font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+}
+.figure-caption {
+  font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem;
+  text-align: center; font-style: italic; line-height: 1.5;
+}
+
+/* ── Sections ── */
+.work-section { margin-bottom: 2.75rem; }
+.work-section h2 {
+  font-family: var(--font-display); font-size: 1.35rem; font-weight: 700;
+  letter-spacing: -0.02em; margin-bottom: 0.9rem; color: var(--text);
+  padding-bottom: 0.6rem; border-bottom: 1px solid var(--border);
+}
+.work-section p {
+  font-size: 0.975rem; line-height: 1.82; color: var(--text-muted); margin-bottom: 0.9rem;
+}
+.work-section p:last-child { margin-bottom: 0; }
+
+.work-section ul {
+  list-style: none; display: flex; flex-direction: column; gap: 0.6rem;
+}
+.work-section li {
+  font-size: 0.975rem; color: var(--text-muted);
+  padding-left: 1.3rem; position: relative; line-height: 1.65;
+}
+.work-section li::before {
+  content: '→'; position: absolute; left: 0;
+  color: var(--accent); font-size: 0.85rem;
+}
+
+/* ── Figure ── */
+.work-figure {
+  margin: 2.5rem 0;
+}
+.figure-placeholder {
+  width: 100%; aspect-ratio: 4/3;
+  background: var(--bg-alt); border: 2px dashed var(--border); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-light);
+  font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+}
+
+/* ── BibTeX ── */
+.bibtex {
+  background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 1.25rem 1.5rem; overflow-x: auto;
+  font-size: 0.8rem; line-height: 1.7;
+  font-family: 'Courier New', monospace; color: var(--text-muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .work-action-links .btn-ghost,
+  .work-action-links .btn-primary { padding: 0.6rem 1.1rem; font-size: 0.82rem; }
+}
