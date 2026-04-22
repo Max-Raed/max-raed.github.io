@@ -2,6 +2,41 @@
    PORTFOLIO — main.js
    ════════════════════════════════════ */
 
+/* ── CV download modal ── */
+(function () {
+  const modal = document.createElement('div');
+  modal.id = 'cv-modal';
+  modal.innerHTML = `
+    <div class="cv-modal-backdrop"></div>
+    <div class="cv-modal-box" role="dialog" aria-modal="true" aria-labelledby="cv-modal-title">
+      <button class="cv-modal-close" aria-label="Close">✕</button>
+      <div class="cv-modal-icon">🚧</div>
+      <h2 id="cv-modal-title">CV is currently being updated</h2>
+      <p>
+        My CV is a work in progress — check back soon for the latest version.<br><br>
+        I will be <strong>available for new positions starting April&nbsp;2028</strong>.
+        Feel free to reach out in the meantime!
+      </p>
+      <a href="mailto:max.raedler@uni-ulm.de" class="btn-primary cv-modal-btn">
+        Get in Touch
+      </a>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  const close = () => modal.classList.remove('cv-modal--open');
+  modal.querySelector('.cv-modal-backdrop').addEventListener('click', close);
+  modal.querySelector('.cv-modal-close').addEventListener('click', close);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+
+  document.querySelectorAll('.btn-cv').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      modal.classList.add('cv-modal--open');
+    });
+  });
+})();
+
 /* ── Mobile nav toggle ── */
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks  = document.querySelector('.nav-links');

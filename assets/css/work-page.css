@@ -64,6 +64,10 @@
   color: var(--text-light);
   font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
 }
+.teaser-img {
+  width: 100%; border-radius: 8px; display: block; object-fit: cover;
+}
+
 .figure-caption {
   font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem;
   text-align: center; font-style: italic; line-height: 1.5;
