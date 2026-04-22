@@ -375,6 +375,9 @@ strong { font-weight: 600; }
   color: var(--text-light);
   font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
 }
+.about-photo {
+  width: 100%; border-radius: 8px; object-fit: cover;
+}
 
 /* Stats */
 .stats-row {
@@ -456,7 +459,10 @@ strong { font-weight: 600; }
 .exp-place span   { font-size: 0.8rem; color: var(--text-muted); }
 
 .exp-desc { display: flex; flex-direction: column; gap: 0.45rem; }
-.exp-role { font-weight: 600; font-size: 0.95rem; color: var(--text); }
+.exp-role {
+  font-weight: 600; font-size: 0.95rem; color: var(--text);
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+}
 .exp-desc p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.65; }
 
 /* ── EDUCATION & SKILLS ── */
@@ -528,6 +534,167 @@ strong { font-weight: 600; }
   cursor: default;
 }
 .skill-tag:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* ── COMMUNITY WORK ── */
+.outstanding-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.outstanding-card {
+  display: flex; align-items: flex-start; gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-alt); border: 1px solid var(--border);
+  border-left: 3px solid var(--accent); border-radius: var(--radius);
+}
+.outstanding-star {
+  font-size: 1.1rem; color: var(--accent); flex-shrink: 0; margin-top: 0.1rem;
+}
+.outstanding-label {
+  display: block; font-weight: 700; font-size: 0.9rem; color: var(--text); margin-bottom: 0.2rem;
+}
+.outstanding-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+
+.community-group { margin-bottom: 2rem; }
+.community-group-title {
+  font-family: var(--font-display); font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 0.9rem;
+}
+.community-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.community-tag {
+  padding: 0.35rem 0.9rem;
+  border: 1.5px solid var(--border); border-radius: 999px;
+  font-size: 0.8rem; font-weight: 500; color: var(--text);
+  transition: border-color var(--trans), color var(--trans);
+}
+.community-tag:hover { border-color: var(--accent); color: var(--accent); }
+.community-tag b {
+  display: inline-block; margin-left: 0.35rem;
+  font-size: 0.7rem; font-weight: 700; color: var(--accent);
+}
+.community-count {
+  font-family: var(--font-body); font-size: 0.78rem; font-weight: 500;
+  color: var(--accent); text-transform: none; letter-spacing: 0;
+}
+.service-award {
+  display: inline-block; margin-top: 0.25rem;
+  font-size: 0.78rem; font-weight: 600; color: var(--accent);
+}
+
+.service-list { display: flex; flex-direction: column; }
+.service-item {
+  display: grid; grid-template-columns: 70px 1fr; gap: 1.25rem; align-items: start;
+  padding: 0.9rem 0; border-top: 1px solid var(--border);
+}
+.service-item:last-child { border-bottom: 1px solid var(--border); }
+.service-year {
+  font-size: 0.8rem; font-weight: 700; color: var(--accent); letter-spacing: 0.02em; padding-top: 0.1rem;
+}
+.service-detail { display: flex; flex-direction: column; gap: 0.15rem; }
+.service-detail strong { font-size: 0.9rem; color: var(--text); }
+.service-detail span  { font-size: 0.8rem; color: var(--text-muted); }
+
+/* ── TEACHING ── */
+.teaching-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 2.5rem 3rem;
+}
+.teaching-group-title {
+  font-family: var(--font-display); font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 0.9rem;
+}
+.teaching-list { display: flex; flex-direction: column; }
+.teaching-item {
+  display: grid; grid-template-columns: 54px 1fr; gap: 0.75rem; align-items: start;
+  padding: 0.75rem 0; border-top: 1px solid var(--border);
+}
+.teaching-item:last-child { border-bottom: 1px solid var(--border); }
+.teaching-year { font-size: 0.78rem; font-weight: 700; color: var(--accent); padding-top: 0.1rem; }
+.teaching-detail { display: flex; flex-direction: column; gap: 0.15rem; }
+.teaching-detail strong { font-size: 0.875rem; color: var(--text); font-weight: 600; }
+.teaching-detail span  { font-size: 0.78rem; color: var(--text-muted); }
+
+/* ── TEACHING extras ── */
+.teaching-stats {
+  display: flex; flex-wrap: wrap; gap: 0;
+  border-top: 2px solid var(--text);
+  margin-bottom: 2.5rem;
+}
+.teaching-stat-item {
+  flex: 1; min-width: 100px;
+  padding: clamp(16px, 3vw, 28px) clamp(12px, 2.5vw, 28px) clamp(16px, 3vw, 28px) 0;
+  border-right: 1px solid var(--border);
+}
+.teaching-stat-item:last-child { border-right: none; }
+.teaching-stat-num {
+  display: block;
+  font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 800; letter-spacing: -0.04em; line-height: 1;
+  color: var(--text); margin-bottom: 0.25rem;
+}
+.teaching-stat-label {
+  display: block; font-size: 0.75rem; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);
+}
+
+.supervision-table {
+  display: flex; flex-direction: column;
+  border: 1px solid var(--border); border-radius: var(--radius);
+  overflow: hidden; margin-bottom: 0.5rem;
+}
+.supervision-head,
+.supervision-row {
+  display: grid; grid-template-columns: 90px repeat(3, 1fr);
+  gap: 0; align-items: center;
+}
+.supervision-head {
+  background: var(--text); color: var(--bg);
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+.supervision-head span,
+.supervision-row span { padding: 0.7rem 1rem; }
+.supervision-row { border-top: 1px solid var(--border); font-size: 0.875rem; }
+.supervision-row:nth-child(even) { background: var(--bg-alt); }
+.supervision-year { font-weight: 700; color: var(--accent); }
+
+.teaching-courses {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 3rem;
+}
+@media (max-width: 640px) {
+  .teaching-courses { grid-template-columns: 1fr; }
+  .supervision-head,
+  .supervision-row { grid-template-columns: 70px repeat(3, 1fr); }
+}
+
+/* ── LIFE PHOTOS ── */
+.life-intro {
+  font-size: 1rem; color: var(--text-muted); line-height: 1.65;
+  margin-bottom: 2rem; max-width: 560px;
+}
+.life-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+}
+.life-photo-card { display: flex; flex-direction: column; gap: 0.5rem; }
+.life-photo-placeholder,
+.life-photo-card img {
+  width: 100%; aspect-ratio: 2/3;
+  border-radius: 6px; object-fit: cover;
+  background: var(--bg-alt); border: 2px dashed var(--border);
+  display: flex; align-items: center; justify-content: center;
+}
+.life-caption {
+  font-size: 0.75rem; color: var(--text-muted); font-style: italic; line-height: 1.4;
+}
+
+@media (max-width: 680px) {
+  .life-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 420px) {
+  .life-grid { grid-template-columns: 1fr; }
+}
 
 /* ── WORKS ── */
 .section-works {
