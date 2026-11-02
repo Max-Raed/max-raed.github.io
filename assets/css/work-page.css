@@ -68,6 +68,12 @@
   width: 100%; border-radius: 8px; display: block; object-fit: cover;
 }
 
+/* wide teaser: breaks out of the 780px text column for panoramic figures */
+.work-teaser--wide {
+  width: min(1100px, calc(100vw - 2 * var(--inner-pad)));
+  position: relative; left: 50%; transform: translateX(-50%);
+}
+
 .figure-caption {
   font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem;
   text-align: center; font-style: italic; line-height: 1.5;
